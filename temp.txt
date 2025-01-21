@@ -1,0 +1,30 @@
+[{"name": "Emily Clarke",
+"username": "@EmilyClarkeAI",
+"comment": "Just started using Plantelligence and I'm already seeing improvements in my crop planning. Great tool!",
+"image": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg"},
+
+{"name": "Lucas Brown",
+"username": "@LucasTechGuru",
+"comment": "The resource recommendation feature has saved me a lot on fertilizer costs. Highly recommend this app!",
+"image": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg"},
+
+{"name": "Mia Wong",
+"username": "@GreenThumbMia",
+"comment": "Fantastic! Helps me manage my resources more efficiently than ever before.",
+"image": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg"},
+
+{"name": "Jack Roberts",
+"username": "@JackInTheField",
+"comment": "I was skeptical at first, but the blockchain ledger has made subsidy transactions so transparent. It's a game changer for my farm.",
+"image": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg"},
+
+{"name": "Isabella Martin",
+"username": "@BellaFarms",
+"comment": "Plantelligence has truly simplified how I manage my large farm. The scalability of the platform is impressive.",
+"image": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg"},
+
+{"name": "Noah Lee",
+"username": "@FarmerNoah",
+"comment": "Using this app has enhanced my farming operations beyond my expectations. The management tools are easy to use and very effective.",
+"image": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg"},
+]
