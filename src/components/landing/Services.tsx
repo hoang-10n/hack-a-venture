@@ -66,7 +66,7 @@ export const Services = () => {
           </div>
         </div>
 
-        <Image
+        <img
           src="/landing/cube-leg.png"
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           alt="About services"
