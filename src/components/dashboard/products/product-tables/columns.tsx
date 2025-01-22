@@ -11,10 +11,11 @@ export const columns: ColumnDef<Product>[] = [
     cell: ({ row }) => {
       return (
         <div className='relative aspect-square'>
-          <img
+          <Image
             src={row.getValue('photo_url')}
             alt={row.getValue('name')}
-            className='rounded-lg size-32'
+            fill
+            className='rounded-lg'
           />
         </div>
       );
