@@ -123,8 +123,8 @@ export const Pricing = () => {
         Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Choose the plan that best fits your needs and start enjoying our
+        services today.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -147,7 +147,9 @@ export const Pricing = () => {
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">{pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                {pricing.title !== "Enterprise" && (
+                  <span className="text-muted-foreground"> /month</span>
+                )}
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>
