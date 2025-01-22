@@ -51,9 +51,9 @@ export const navItems: NavItem[] = [
     ]
   },
   {
-    title: 'Kanban',
-    url: '/dashboard/kanban',
-    icon: 'kanban',
+    title: 'Upload Image',
+    url: '/dashboard/upload',
+    icon: 'upload',
     shortcut: ['k', 'k'],
     isActive: false,
     items: [] // No child items
