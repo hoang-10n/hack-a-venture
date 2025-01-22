@@ -1,4 +1,5 @@
 import SignInView from '@/components/signin/Signin';
+import { ThemeProvider } from '@/components/theme-provider';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -24,5 +25,9 @@ export default async function Page() {
     } catch (error) {
         console.error('Error fetching GitHub stars:', error);
     }
-    return <SignInView stars={stars} />;
+    return (
+        <ThemeProvider>
+            <SignInView stars={stars} />
+        </ThemeProvider>
+    );
 }

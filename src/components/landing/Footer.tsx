@@ -1,5 +1,5 @@
+import { Hexagon } from "lucide-react";
 import Link from "next/link";
-import { LogoIcon } from "../Icons";
 
 export const Footer = () => {
   return (
@@ -13,7 +13,8 @@ export const Footer = () => {
             href="/"
             className="font-bold text-xl flex"
           >
-            <LogoIcon />
+            // TODO replace with real logo
+            <Hexagon />
             ShadcnUI/React
           </Link>
         </div>

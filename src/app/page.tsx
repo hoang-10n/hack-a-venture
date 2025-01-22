@@ -17,7 +17,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 export default function Home() {
   return (
-    <ThemeProvider>
+    <>
       <Navbar />
       <Hero />
       <Sponsors />
@@ -33,6 +33,6 @@ export default function Home() {
       <FAQ />
       <Footer />
       <ScrollToTop />
-    </ThemeProvider>
+    </>
   );
 }

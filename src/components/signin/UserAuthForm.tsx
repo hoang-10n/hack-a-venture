@@ -37,13 +37,14 @@ export default function UserAuthForm() {
   });
 
   const onSubmit = async (data: UserFormValue) => {
-    startTransition(() => {
-      signIn('credentials', {
-        email: data.email,
-        callbackUrl: callbackUrl ?? '/dashboard'
-      });
-      toast.success('Signed In Successfully!');
-    });
+    // startTransition(() => {
+    //   signIn('credentials', {
+    //     email: data.email,
+    //     callbackUrl: callbackUrl ?? '/dashboard'
+    //   });
+    //   toast.success('Signed In Successfully!');
+    // });
+    console.log(callbackUrl)
   };
 
   return (

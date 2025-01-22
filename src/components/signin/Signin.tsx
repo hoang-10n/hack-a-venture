@@ -1,7 +1,6 @@
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import { StarIcon } from 'lucide-react';
+import { Github, StarIcon } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import UserAuthForm from './UserAuthForm';
@@ -65,7 +64,7 @@ export default function SignInView({ stars }: { stars: number }) {
             href={'https://github.com/kiranism/next-shadcn-dashboard-starter'}
           >
             <div className='flex items-center'>
-              <GitHubLogoIcon className='size-4' />
+              <Github className='size-4' />
               <span className='ml-1 inline'>Star on GitHub</span>{' '}
             </div>
             <div className='ml-2 flex items-center gap-1 text-sm md:flex'>
@@ -78,10 +77,10 @@ export default function SignInView({ stars }: { stars: number }) {
           </Link>
           <div className='flex flex-col space-y-2 text-center'>
             <h1 className='text-2xl font-semibold tracking-tight'>
-              Create an account
+              Sign into <span className='text-green-500'>Plantelligence</span> now!
             </h1>
             <p className='text-sm text-muted-foreground'>
-              Enter your email below to create your account
+              Enter your email below to sign into our app
             </p>
           </div>
           <UserAuthForm />

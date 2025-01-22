@@ -9,9 +9,8 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
+import { Check, Github, Linkedin } from "lucide-react";
 import { LightBulbIcon } from "../Icons";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
 export const HeroCards = () => {
@@ -69,7 +68,7 @@ export const HeroCards = () => {
               })}
             >
               <span className="sr-only">Github icon</span>
-              <GitHubLogoIcon className="w-5 h-5" />
+              <Github className="w-5 h-5" />
             </a>
             <a
               rel="noreferrer noopener"

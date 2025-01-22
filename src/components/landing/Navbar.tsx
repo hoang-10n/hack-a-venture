@@ -13,12 +13,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../ui/button";
-import { Menu } from "lucide-react";
-import { ModeToggle } from "../mode-toggle";
+import { Github, Menu } from "lucide-react";
 import { LogoIcon } from "../Icons";
 import Link from "next/link";
+import ThemeToggle from "../layout/ThemeToggle/theme-toggle";
 
 interface RouteProps {
   href: string;
@@ -63,7 +62,7 @@ export const Navbar = () => {
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
+            <ThemeToggle />
 
             <Sheet
               open={isOpen}
@@ -104,7 +103,7 @@ export const Navbar = () => {
                       variant: "secondary",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
+                    <Github className="mr-2 w-5 h-5" />
                     Github
                   </a>
                 </nav>
@@ -135,11 +134,11 @@ export const Navbar = () => {
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
+              <Github className="mr-2 w-5 h-5" />
               Github
             </a>
 
-            <ModeToggle />
+            <ThemeToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>
