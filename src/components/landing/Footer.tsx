@@ -15,7 +15,7 @@ export const Footer = () => {
           >
             // TODO replace with real logo
             <Hexagon />
-            ShadcnUI/React
+            Plantelligence
           </Link>
         </div>
 

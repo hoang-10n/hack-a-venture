@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { buttonVariants } from "../ui/button";
-import { Github, Menu } from "lucide-react";
+import { Github, LogIn, Menu } from "lucide-react";
 import { LogoIcon } from "../Icons";
 import Link from "next/link";
 import ThemeToggle from "../layout/ThemeToggle/theme-toggle";
@@ -56,7 +56,7 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              ShadcnUI/React
+              Plantelligence
             </Link>
           </NavigationMenuItem>
 
@@ -130,12 +130,12 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+              href="/signin"
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <Github className="mr-2 w-5 h-5" />
-              Github
+              <LogIn className="mr-2 w-5 h-5" />
+              Sign In
             </a>
 
             <ThemeToggle />
