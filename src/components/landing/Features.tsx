@@ -16,43 +16,39 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "AI-Powered Crop Management",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Uses AI to monitor crop health through imagery, identifying early signs of issues for preventive measures.",
     image: "/landing/looking-ahead.png",
   },
   {
-    title: "Intuitive user interface",
+    title: "Blockchain-Based Financial Transparency",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Integrates blockchain for transparent and secure financial transactions, using smart contracts.",
     image: "/landing/reflecting.png",
   },
   {
-    title: "AI-Powered insights",
+    title: "Resource Recommendation Engine",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Analyzes conditions to suggest optimal fertilizers, pesticides, and irrigation techniques.",
     image: "/landing/growth.png",
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "AI Crop Management",
+  "Blockchain Transparency",
+  "Pest Monitoring",
+  "Resource Engine",
+  "Marketplace",
+  "Smart Contracts",
+  "Resource Management",
+  "Sustainable Farming",
 ];
 
 export const Features = () => {
   return (
-    <section
-      id="features"
-      className="container py-24 sm:py-32 space-y-8"
-    >
+    <section id="features" className="container py-24 sm:py-32 space-y-8">
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
         Many{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -63,10 +59,7 @@ export const Features = () => {
       <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature: string) => (
           <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
+            <Badge variant="secondary" className="text-sm">
               {feature}
             </Badge>
           </div>
