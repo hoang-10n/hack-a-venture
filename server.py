@@ -13,7 +13,7 @@ def proxy_api():
     file = request.files["images"]
     filename = secure_filename(file.filename)
     data_stuff = {key: request.form[key] for key in request.form}
-    print(data_stuff)
+    print(data_stuff, filename, file)
 
     try:
         # Send the request to the external API
@@ -27,7 +27,7 @@ def proxy_api():
                 )
             },
             data={key: request.form[key] for key in request.form},
-            headers={"Api-Key": "TB4e265HInR7HDJ9zpWFxQ7JxUf96QCkjgnwlsxLdpAw2v0Sd7"},
+            headers={"Api-Key": "YGXTHx68wRYavehysDzlg3dSxzd9TlxhnTZvw9frUbjJpyqxMI"},
         )
         return jsonify(response.json())
     except requests.exceptions.RequestException as e:

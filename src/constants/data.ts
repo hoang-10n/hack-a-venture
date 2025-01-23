@@ -26,8 +26,8 @@ export type Product = {
 
 export type Disease = {
   plant: string;
-  symtomp: string;
-  disease: { name: string, accuracyPercentage: number }[]
+  symptom: string;
+  diseases: { name: string, accuracyPercentage: number }[]
 }
 
 //Info: The following data is used for the sidebar navigation and Cmd K bar.
@@ -62,7 +62,7 @@ export const navItems: NavItem[] = [
         shortcut: ['m', 'm']
       },
       {
-        title: 'Login',
+        title: 'Sign out',
         shortcut: ['l', 'l'],
         url: '/',
         icon: 'login'

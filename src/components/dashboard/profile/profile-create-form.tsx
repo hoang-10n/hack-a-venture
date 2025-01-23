@@ -14,7 +14,6 @@ import {
   FormLabel,
   FormMessage
 } from '@/components/ui/form';
-import { Heading } from '@/components/ui/heading';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -24,7 +23,7 @@ import {
   SelectValue
 } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
-import { profileSchema, type ProfileFormValues } from '../utils/form-schema';
+import { profileSchema, type ProfileFormValues } from '@/lib/form-schema';
 import { cn } from '@/lib/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertTriangleIcon, Trash, Trash2Icon } from 'lucide-react';
@@ -180,7 +179,10 @@ const ProfileCreateForm: React.FC<ProfileFormType> = ({
   return (
     <>
       <div className='flex items-center justify-between'>
-        <Heading title={title} description={description} />
+        <div>
+          <h2 className='text-3xl font-bold tracking-tight'>{title}</h2>
+          <p className='text-sm text-muted-foreground'>{description}</p>
+        </div>
         {initialData && (
           <Button
             disabled={loading}
