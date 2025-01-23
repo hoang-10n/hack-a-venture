@@ -30,7 +30,7 @@ import {
   SidebarRail,
   useSidebar
 } from '@/components/ui/sidebar';
-import { navItems } from '@/constants/data';
+import { NavItem, navItems } from '@/constants/data';
 import {
   BadgeCheck,
   Bell,
@@ -44,20 +44,7 @@ import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
-import { Icon, IconList } from './icon-list';
-
-interface Item {
-  title: string;
-  url: string;
-  disabled?: boolean;
-  external?: boolean;
-  shortcut?: [string, string];
-  icon?: keyof typeof IconList;
-  label?: string;
-  description?: string;
-  isActive?: boolean;
-  items?: Item[];
-}
+import { IconList } from './icon-list';
 
 export const company = {
   name: 'Acme Inc',
@@ -87,7 +74,7 @@ export default function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Overview</SidebarGroupLabel>
           <SidebarMenu>
-            {navItems.map((item: Item) => {
+            {navItems.map((item: NavItem) => {
               const Icon = item.icon ? IconList[item.icon] : IconList.logo;
               return item?.items && item?.items?.length > 0 ? (
                 <Collapsible

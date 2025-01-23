@@ -1,4 +1,17 @@
-import { NavItem } from 'types';
+import { IconList } from "@/components/layout/icon-list";
+
+export interface NavItem {
+  title: string;
+  url: string;
+  disabled?: boolean;
+  external?: boolean;
+  shortcut?: [string, string];
+  icon?: keyof typeof IconList;
+  label?: string;
+  description?: string;
+  isActive?: boolean;
+  items?: NavItem[];
+}
 
 export type Product = {
   photo_url: string;
@@ -10,6 +23,12 @@ export type Product = {
   category: string;
   updated_at: string;
 };
+
+export type Disease = {
+  plant: string;
+  symtomp: string;
+  disease: { name: string, accuracyPercentage: number }[]
+}
 
 //Info: The following data is used for the sidebar navigation and Cmd K bar.
 export const navItems: NavItem[] = [
