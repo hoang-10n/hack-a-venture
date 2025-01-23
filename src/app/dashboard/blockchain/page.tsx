@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { LoaderCircle } from "lucide-react";
 import Card from "./components/Card";
 import { MainLayout } from "./layouts/MainLayout";
@@ -15,7 +15,7 @@ import FundCard from "./components/FundCard";
 import LatestDonation from "./components/LatestDonation";
 import { FundedEvent } from "./lib/type";
 
-const projectId = process.env.VITE_WALLETCONNECT_PROJECT_ID ?? "";
+const projectId = "288ef52e1aab9ed5203d65218fb8752b";
 
 const sepolia = {
   chainId: 11155111,
