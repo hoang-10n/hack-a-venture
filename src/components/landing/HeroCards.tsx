@@ -20,20 +20,17 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage
-              alt=""
-              src="https://github.com/shadcn.png"
-            />
+            <AvatarImage alt="" src="https://github.com/shadcn.png" />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">John Doe</CardTitle>
-            <CardDescription>@john_doe</CardDescription>
+            <CardTitle className="text-lg">Duc Tran</CardTitle>
+            <CardDescription>@tran_duc134</CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>Great for both novices and experts!</CardContent>
+        <CardContent>Great for both small and big enterprise!</CardContent>
       </Card>
 
       {/* Team */}
@@ -52,7 +49,8 @@ export const HeroCards = () => {
 
         <CardContent className="text-center pb-2">
           <p>
-            This app makes farm management and education more accessible and straigtforward for everyone.
+            As a farmer, this app has helped my farm with early desease
+            detection before it spread.
           </p>
         </CardContent>
 
@@ -112,10 +110,7 @@ export const HeroCards = () => {
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
             Free
-            <Badge
-              variant="secondary"
-              className="text-sm text-primary"
-            >
+            <Badge variant="secondary" className="text-sm text-primary">
               Most popular
             </Badge>
           </CardTitle>
@@ -125,7 +120,8 @@ export const HeroCards = () => {
           </div>
 
           <CardDescription>
-            Subscribe to use all of our advanced functionalities for a month. Cancel at any time.
+            Subscribe to use all of our advanced functionalities for a month.
+            Cancel at any time.
           </CardDescription>
         </CardHeader>
 
@@ -137,17 +133,17 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["Individual Use", "Unlimited Analytic Queries", "Blockchain Marketplace", "Customized Dashboard"].map(
-              (benefit: string) => (
-                <span
-                  key={benefit}
-                  className="flex"
-                >
-                  <Check className="text-green-500" />{" "}
-                  <h3 className="ml-2">{benefit}</h3>
-                </span>
-              )
-            )}
+            {[
+              "Individual Use",
+              "Unlimited Analytic Queries",
+              "Blockchain Marketplace",
+              "Customized Dashboard",
+            ].map((benefit: string) => (
+              <span key={benefit} className="flex">
+                <Check className="text-green-500" />{" "}
+                <h3 className="ml-2">{benefit}</h3>
+              </span>
+            ))}
           </div>
         </CardFooter>
       </Card>
@@ -162,7 +158,8 @@ export const HeroCards = () => {
             <CardTitle>Intuitive guidelines</CardTitle>
             <CardDescription className="text-md mt-2">
               <p>
-                Interactive and detailed guides with steps for new users. Can be reviewed at any time.
+                Interactive and detailed guides with steps for new users. Can be
+                reviewed at any time.
               </p>
             </CardDescription>
           </div>

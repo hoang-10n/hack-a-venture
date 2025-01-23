@@ -11,21 +11,21 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "AI Based Plant deseases detection",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "AI based plant deseases detection system using machine learning and computer vision.",
     icon: <ChartIcon />,
   },
   {
-    title: "Project Management",
+    title: "Blockchain Wallet Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Using blockchain technology to create secure and reliable wallet for your business.",
     icon: <WalletIcon />,
   },
   {
-    title: "Task Automation",
+    title: "Crops management",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Manage your crops and get insights about your crops using our AI based system.",
     icon: <MagnifierIcon />,
   },
 ];
@@ -42,9 +42,10 @@ export const Services = () => {
             Services
           </h2>
 
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+          <p className="text-muted-foreground text-xl mt-4 mb-8">
+            Our services are designed to provide innovative solutions tailored
+            to your needs, leveraging the latest in AI and blockchain
+            technology.
           </p>
 
           <div className="flex flex-col gap-8">
