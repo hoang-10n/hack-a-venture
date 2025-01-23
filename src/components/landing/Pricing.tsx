@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, X } from "lucide-react";
 
 enum PopularPlanType {
   NO = 0,
@@ -18,66 +18,102 @@ enum PopularPlanType {
 interface PricingProps {
   title: string;
   popular: PopularPlanType;
-  price: number;
+  price: string;
   description: string;
   buttonText: string;
-  benefitList: string[];
+  benefitList: { benefit: string; available: boolean | string }[];
 }
 
 const pricingList: PricingProps[] = [
   {
     title: "Free",
-    popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+    popular: PopularPlanType.NO,
+    price: "$0",
+    description: "Basic access to the platform.",
     buttonText: "Get Started",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      { benefit: "Crop Condition Diagnosis", available: "20 queries / day" },
+      { benefit: "Blockchain Transactions", available: true },
+      { benefit: "Community Connectivity", available: true },
+      { benefit: "Chat with AI chatbot", available: false },
+      { benefit: "Ad-free Experience", available: false },
+      { benefit: "Product Suggestions", available: false },
+      { benefit: "Advanced Planning Tools", available: false },
+      { benefit: "Integration with IoT Systems", available: false },
+      { benefit: "Data Visualization Tools", available: false },
+      { benefit: "Weather & Crop Predictions", available: false },
+      { benefit: "Member Management & Reports", available: false },
+      { benefit: "Prioritized Customer Support", available: false },
     ],
   },
   {
-    title: "Premium",
-    popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+    title: "Personal",
+    popular: PopularPlanType.NO,
+    price: "$10",
+    description: "For individual users.",
     buttonText: "Start Free Trial",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      { benefit: "Crop Condition Diagnosis", available: "100 queries / day" },
+      { benefit: "Blockchain Transactions", available: true },
+      { benefit: "Community Connectivity", available: true },
+      { benefit: "Chat with AI chatbot", available: "100 queries / day" },
+      { benefit: "Ad-free Experience", available: true },
+      { benefit: "Product Suggestions", available: true },
+      { benefit: "Advanced Planning Tools", available: false },
+      { benefit: "Integration with IoT Systems", available: false },
+      { benefit: "Data Visualization Tools", available: false },
+      { benefit: "Weather & Crop Predictions", available: false },
+      { benefit: "Member Management & Reports", available: false },
+      { benefit: "Prioritized Customer Support", available: false },
+    ],
+  },
+  {
+    title: "Advanced",
+    popular: PopularPlanType.YES,
+    price: "$15",
+    description: "For advanced users.",
+    buttonText: "Start Free Trial",
+    benefitList: [
+      { benefit: "Crop Condition Diagnosis", available: "No limit" },
+      { benefit: "Blockchain Transactions", available: true },
+      { benefit: "Community Connectivity", available: true },
+      { benefit: "Chat with AI chatbot", available: "No limit" },
+      { benefit: "Ad-free Experience", available: true },
+      { benefit: "Product Suggestions", available: true },
+      { benefit: "Advanced Planning Tools", available: true },
+      { benefit: "Integration with IoT Systems", available: true },
+      { benefit: "Data Visualization Tools", available: true },
+      { benefit: "Weather & Crop Predictions", available: true },
+      { benefit: "Member Management & Reports", available: false },
+      { benefit: "Prioritized Customer Support", available: false },
     ],
   },
   {
     title: "Enterprise",
-    popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+    popular: PopularPlanType.NO,
+    price: "Contact for more",
+    description: "For enterprise users.",
+    buttonText: "Contact Us",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      { benefit: "Crop Condition Diagnosis", available: "No limit" },
+      { benefit: "Blockchain Transactions", available: true },
+      { benefit: "Community Connectivity", available: true },
+      { benefit: "Chat with AI chatbot", available: "No limit" },
+      { benefit: "Ad-free Experience", available: true },
+      { benefit: "Product Suggestions", available: true },
+      { benefit: "Advanced Planning Tools", available: true },
+      { benefit: "Integration with IoT Systems", available: true },
+      { benefit: "Data Visualization Tools", available: true },
+      { benefit: "Weather & Crop Predictions", available: true },
+      { benefit: "Member Management & Reports", available: true },
+      { benefit: "Prioritized Customer Support", available: true },
     ],
   },
 ];
 
 export const Pricing = () => {
   return (
-    <section
-      id="pricing"
-      className="container py-24 sm:py-32"
-    >
+    <section id="pricing" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
         Get
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -87,10 +123,10 @@ export const Pricing = () => {
         Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Choose the plan that best fits your needs and start enjoying our
+        services today.
       </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
@@ -104,17 +140,16 @@ export const Pricing = () => {
               <CardTitle className="flex item-center justify-between">
                 {pricing.title}
                 {pricing.popular === PopularPlanType.YES ? (
-                  <Badge
-                    variant="secondary"
-                    className="text-sm text-primary"
-                  >
+                  <Badge variant="secondary" className="text-sm text-primary">
                     Most popular
                   </Badge>
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-3xl font-bold">{pricing.price}</span>
+                {pricing.title !== "Enterprise" && (
+                  <span className="text-muted-foreground"> /month</span>
+                )}
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>
@@ -128,12 +163,15 @@ export const Pricing = () => {
 
             <CardFooter className="flex">
               <div className="space-y-4">
-                {pricing.benefitList.map((benefit: string) => (
-                  <span
-                    key={benefit}
-                    className="flex"
-                  >
-                    <Check className="text-green-500" />{" "}
+                {pricing.benefitList.map(({ benefit, available }) => (
+                  <span key={benefit} className="flex">
+                    {available === true ? (
+                      <Check className="text-green-500" />
+                    ) : available === false ? (
+                      <X className="text-red-500" />
+                    ) : (
+                      <span className="text-green-500">{available}</span>
+                    )}
                     <h3 className="ml-2">{benefit}</h3>
                   </span>
                 ))}
