@@ -41,9 +41,9 @@ export function AreaGraph() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Area Chart - Stacked</CardTitle>
+        <CardTitle>Number of transactions</CardTitle>
         <CardDescription>
-          Showing total visitors for the last 6 months
+          Total number of transactions that you have made/received for the last 6 months
         </CardDescription>
       </CardHeader>
       <CardContent>
