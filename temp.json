@@ -1,0 +1,26 @@
+{
+    "plant": "Cotton",
+    "symptom": "leaf curl",
+    "diseases": [
+        {
+            "name": "Cotton leaf curl virus",
+            "accuracyPercentage": 98
+        },
+        {
+            "name": "Fusarium wilt",
+            "accuracyPercentage": 75
+        },
+        {
+            "name": "Verticillium wilt",
+            "accuracyPercentage": 72
+        },
+        {
+            "name": "Bacterial blight",
+            "accuracyPercentage": 68
+        },
+        {
+            "name": "Alternaria leaf spot",
+            "accuracyPercentage": 65
+        }
+    ]
+}

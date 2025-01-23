@@ -1,30 +1,28 @@
-[{"name": "Emily Clarke",
-"username": "@EmilyClarkeAI",
-"comment": "Just started using Plantelligence and I'm already seeing improvements in my crop planning. Great tool!",
-"image": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg"},
-
-{"name": "Lucas Brown",
-"username": "@LucasTechGuru",
-"comment": "The resource recommendation feature has saved me a lot on fertilizer costs. Highly recommend this app!",
-"image": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg"},
-
-{"name": "Mia Wong",
-"username": "@GreenThumbMia",
-"comment": "Fantastic! Helps me manage my resources more efficiently than ever before.",
-"image": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg"},
-
-{"name": "Jack Roberts",
-"username": "@JackInTheField",
-"comment": "I was skeptical at first, but the blockchain ledger has made subsidy transactions so transparent. It's a game changer for my farm.",
-"image": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg"},
-
-{"name": "Isabella Martin",
-"username": "@BellaFarms",
-"comment": "Plantelligence has truly simplified how I manage my large farm. The scalability of the platform is impressive.",
-"image": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg"},
-
-{"name": "Noah Lee",
-"username": "@FarmerNoah",
-"comment": "Using this app has enhanced my farming operations beyond my expectations. The management tools are easy to use and very effective.",
-"image": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg"},
-]
+From now on, when I input an agricultural crop, you will choose the most well-known symptom of that crop with the most common disease, then give me the names of the 5 most closely-related diseases with this symptom with percentage accuracy with 2 decimal digits (as convincing as possible)
+You should return answer in json like this and nothing else: 
+{
+    "plant": "Cotton",
+    "symptom": "leaf curl",
+    "diseases": [
+        {
+            "name": "Cotton leaf curl virus",
+            "accuracyPercentage": 98
+        },
+        {
+            "name": "Fusarium wilt",
+            "accuracyPercentage": 75
+        },
+        {
+            "name": "Verticillium wilt",
+            "accuracyPercentage": 72
+        },
+        {
+            "name": "Bacterial blight",
+            "accuracyPercentage": 68
+        },
+        {
+            "name": "Alternaria leaf spot",
+            "accuracyPercentage": 65
+        }
+    ]
+}

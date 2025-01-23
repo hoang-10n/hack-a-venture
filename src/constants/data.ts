@@ -1,4 +1,17 @@
-import { NavItem } from 'types';
+import { IconList } from "@/components/layout/icon-list";
+
+export interface NavItem {
+  title: string;
+  url: string;
+  disabled?: boolean;
+  external?: boolean;
+  shortcut?: [string, string];
+  icon?: keyof typeof IconList;
+  label?: string;
+  description?: string;
+  isActive?: boolean;
+  items?: NavItem[];
+}
 
 export type Product = {
   photo_url: string;
@@ -10,6 +23,12 @@ export type Product = {
   category: string;
   updated_at: string;
 };
+
+export type Disease = {
+  plant: string;
+  symptom: string;
+  diseases: { name: string, accuracyPercentage: number }[]
+}
 
 //Info: The following data is used for the sidebar navigation and Cmd K bar.
 export const navItems: NavItem[] = [
@@ -43,7 +62,7 @@ export const navItems: NavItem[] = [
         shortcut: ['m', 'm']
       },
       {
-        title: 'Login',
+        title: 'Sign out',
         shortcut: ['l', 'l'],
         url: '/',
         icon: 'login'
@@ -51,9 +70,17 @@ export const navItems: NavItem[] = [
     ]
   },
   {
-    title: 'Kanban',
-    url: '/dashboard/kanban',
-    icon: 'kanban',
+    title: 'Upload Image',
+    url: '/dashboard/upload',
+    icon: 'upload',
+    shortcut: ['k', 'k'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'Blockchain',
+    url: '/dashboard/blockchain',
+    icon: 'dashboard',
     shortcut: ['k', 'k'],
     isActive: false,
     items: [] // No child items

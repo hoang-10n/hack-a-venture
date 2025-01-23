@@ -43,7 +43,7 @@ export const IconList = {
   close: X,
   product: LucideShoppingBag,
   spinner: Loader2,
-  kanban: CircuitBoardIcon,
+  upload: CircuitBoardIcon,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   trash: Trash,
